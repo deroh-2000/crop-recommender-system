@@ -83,7 +83,7 @@ DATABASES = {
     }
 }
 
-DATABASES['default'] = dj_database_url.parse("postgresql://crop_recommender_system_user:k1Op7AoHHqAX89mNEM6u4n2wZLHilkwV@dpg-cvp5s0a4d50c73bomrlg-a.oregon-postgres.render.com/crop_recommender_system")
+DATABASES['default'] = dj_database_url.parse("postgresql://crop_recommender_system_user:k1Op7AoHHqAX89mNEM6u4n2wZLHilkwV@dpg-cvp5s0a4d50c73bomrlg-a/crop_recommender_system")
 
 
 # Password validation
