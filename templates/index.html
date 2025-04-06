@@ -1,0 +1,42 @@
+<!-- Home Page -->
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Home{% endblock %}
+{% block content %}
+    <div class="hero">
+        Welcome to Crop Recommender System
+        <div class="text-center mt-4">
+            <p class="lead">Get the best crop recommendations based on your soil and climate conditions.</p>
+            <a href="/recommend" class="btn btn-primary">Get Started</a>
+        </div>
+    </div>
+        <!-- Features Section -->
+        <div class="row mt-5 text-center">
+            <div class="row mt-5">
+                <div class="col-md-4">
+                    <div class="card data-driven card-hover">
+                        <div class="card-body">
+                            <h5 class="card-title">Data-Driven</h5>
+                            <p class="card-text">Our system analyzes real-time agricultural data to provide the best crop recommendations.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card user-friendly card-hover">
+                        <div class="card-body">
+                            <h5 class="card-title">User-Friendly</h5>
+                            <p class="card-text">Designed with an intuitive interface for farmers of all experience levels.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card efficient card-hover">
+                        <div class="card-body">
+                            <h5 class="card-title">Efficient</h5>
+                            <p class="card-text">Our system ensures quick and accurate recommendations based on input parameters.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock %}

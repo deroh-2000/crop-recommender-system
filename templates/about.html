@@ -1,0 +1,60 @@
+<!-- About Page -->
+{% extends "base.html" %}
+{% load static %}
+{% block title %}About{% endblock %}
+{% block content %}
+    <div class="row align-items-center pt-0 py-3">
+        <div class="about-hero">
+            <div>
+                <h1 class="fw-bold">About Us</h1>
+                <p class="lead">Empowering farmers with AI-driven crop recommendations for better yields.</p>
+            </div>
+        </div>
+        
+        <div class="about-section text-center mt-4">
+            <h2 class="fw-bold">Our Mission</h2>
+            <p class="lead">Providing farmers with intelligent recommendations based on real-time agricultural data.</p>
+        </div>
+        <div class="row align-items-center mt-4">
+            <div class="col-md-6">
+                <img src="/static/images/col-img.jpg" class="img-fluid rounded shadow" alt="Agriculture Tech" style="height: 400px; width: 600px">
+            </div>
+            <div class="col-md-6">
+                <h4 class="fw-bold">Why Choose Us?</h4>
+                <p class="lead">Our Crop Recommender System leverages advanced machine learning algorithms to provide the best crop recommendations based on soil and climate conditions.</p>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">AI-driven insights for precision farming</li>
+                    <li class="list-group-item">Data-backed recommendations</li>
+                    <li class="list-group-item">Sustainable agricultural practices</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-md-4">
+                <div class="card data-driven card-hover">
+                    <div class="card-body">
+                        <h5 class="card-title">Data-Driven</h5>
+                        <p class="card-text">Our system analyzes real-time agricultural data to provide the best crop recommendations.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card user-friendly card-hover">
+                    <div class="card-body">
+                        <h5 class="card-title">User-Friendly</h5>
+                        <p class="card-text">Designed with an intuitive interface for farmers of all experience levels.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card efficient card-hover">
+                    <div class="card-body">
+                        <h5 class="card-title">Efficient</h5>
+                        <p class="card-text">Our system ensures quick and accurate recommendations based on input parameters.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+    <div class="container mt-5">
+        {% if user.is_authenticated %}
+                <h2 class="text-center fw-bold">Welcome, {{ user.first_name|default:user.username }}!</h2>
+        {% endif %}
+
+        <p class="text-center text-muted">Manage your recommendations and view insights.</p>
+
+        <div class="row">
+            <!-- Summary Cards -->
+            <div class="col-md-4">
+                <div class="card shadow-sm p-3 mb-4">
+                    <h5 class="fw-bold">Total Recommendations</h5>
+                    <p class="fs-4">{{ total_recommendations }}</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-sm p-3 mb-4">
+                    <h5 class="fw-bold">Saved Reports</h5>
+                    <p class="fs-4">{{ total_reports }}</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-sm p-3 mb-4">
+                    <h5 class="fw-bold">Most Recommended Crop</h5>
+                    <p class="fs-4">{{ most_recommended_crop }}</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recommendation History Table -->
+        <div class="card shadow-sm p-4">
+            <h4 class="fw-bold">Your Recommendations</h4>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Nitrogen</th>
+                            <th>Phosphorus</th>
+                            <th>Potassium</th>
+                            <th>pH</th>
+                            <th>Rainfall</th>
+                            <th>Temperature</th>
+                            <th>Crop</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for recommendation in recommendations %}
+                        <tr>
+                            <td>{{ recommendation.date }}</td>
+                            <td>{{ recommendation.nitrogen }}</td>
+                            <td>{{ recommendation.phosphorus }}</td>
+                            <td>{{ recommendation.potassium }}</td>
+                            <td>{{ recommendation.ph }}</td>
+                            <td>{{ recommendation.rainfall }}</td>
+                            <td>{{ recommendation.temperature }}</td>
+                            <td>{{ recommendation.recommended_crop }}</td>
+                        </tr>
+                        {% empty %}
+                        <tr>
+                            <td colspan="8" class="text-center text-muted">No recommendations found.</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}
